@@ -1,0 +1,194 @@
+body{
+    font-family: 'Inter', sans-serif;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+header {
+    background-color: rgb(106, 81, 81);
+    width: 100%; 
+    height: 8vh; 
+    background: #202020!important;
+}
+
+.header-container {
+    max-width: 1700px;
+    width: 85%;
+    height: 8vh;
+    margin: 0 auto;
+    display: flex;
+    /* justify-content: space-around; */
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+header .header-container .logo-img {
+    width: 140px;
+    height: auto;
+    cursor: pointer;
+}
+
+header .header-container .navbar li{
+    list-style: none;
+}
+
+header .header-container .navbar li a {
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    position: relative;
+}
+
+header .header-container .navbar {
+    display: flex;
+    gap: 35px;
+}
+
+header .header-container .menu {
+    display: flex;
+    gap: 10px;
+}
+
+header .header-container .menu .zero-icon{
+    font-weight: bold;
+    filter: invert(1) brightness(2);
+    cursor: pointer;
+}
+
+header .header-container .menu img{
+    /* font-weight: bold; */
+    color: white;
+    filter: invert(1) brightness(2);
+    cursor: pointer;
+}
+
+header .header-container .navbar li a::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px; /* Thickness of the underline */
+    background: white; /* Color of the underline */
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Adjust this value for spacing */
+    transform: scaleX(0); /* Hide the line initially */
+    /* transition: transform 0.3s;  */
+    transition: 0.3s;
+}
+
+header .header-container .navbar li a:hover::after {
+     transform: scaleX(1); 
+}
+
+.nav-icon{
+    display: block !important;
+    position: absolute !important;
+    height: 1px !important;
+    width: 100%;
+    background: #e1e1e1;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    padding: 0 !important;
+    transform: rotate(0);
+    transition: .1s ease-in-out;
+}
+
+.main .shop .shop-img {
+    width: 100%;
+    height: auto;
+}
+
+.shop {
+    position: relative;
+    display: inline-block;
+}
+
+.shop-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centering the text */
+    color: white;
+    text-align: center; /* Optional: Adds background to make text more visible */
+    padding: 10px;
+    width: 80%; /* Adjust the width of the text area */
+    max-width: 600px; /* Optional: Limit the width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.shop-text .h1 {
+    /* margin-bottom: 10px; */
+    font-size: 35px;
+    line-height: 1.5; 
+    font-family: Montserrat,sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 1rem 0;
+}
+
+.shop-text .p1 {
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    /* font-weight: 200; */
+    text-transform: uppercase;
+    /* margin: 10px 20px; */
+    margin-bottom: -15px ;
+}
+
+.shop-text .p2 {
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    /* font-weight: 200; */
+    text-transform: uppercase;
+    margin-top: -25px;
+}
+
+.shop-text .show-now {
+    font-family: 'Arial', sans-serif;
+    width: 80px;
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+    padding: 15px 21px;
+    /* margin-bottom: 50px; */
+    border: 1px solid white;
+    border-radius: 1px;
+    transition: background-color 0.3s ease;
+}
+
+.shop-text .show-now:hover {
+    background-color: white;
+    color: black;
+    transition: 0.5s;
+}
+
+
+
+
+@media (max-width:1000px) {
+    .header-container {
+    width: 95%;
+}
+}
+
+@media (max-width:850px) {
+    .header-container {
+    width: 95%;
+}
+}
+
+
+margin-bottom: 0;
+    line-height: 1em;
+
+
+    margin-bottom: .5em;
+    line-height: 1.2em;
+
+        font-size: 11.666666666666666px;

@@ -359,8 +359,8 @@ header .header-container .navbar {
     position: absolute;
     top: 0;
     left: 0;
-    width: 300px; /* Fixed image size */
-    height: 600px;
+    width: 100%; /* Fixed image size */
+    height: 100%;
     opacity: 0;
     z-index: 2;
     transition: opacity 0.5s ease, transform 3.5s ease;

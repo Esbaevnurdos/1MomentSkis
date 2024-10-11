@@ -14,12 +14,19 @@
 <body>
     <header>
         <div class="header-container">
+            <div class="burger" id="burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+
             <div class="logo">
                 <img class="logo-img" src="//www.momentskis.com/cdn/shop/files/Moment_header_pure_white_410x.png?v=1614314902" alt="">
             </div>
 
+
             
-            <ul class="navbar">
+            <ul class="navbar" id="navbar">
                 <li><a href="">SKIS</a></li>
                 <li><a href="">BINDINGS</a></li>
                 <li><a href="">GEAR</a></li>
@@ -235,5 +242,15 @@
         <p>&copy; 2024 Moment Skis.</p>
     </div>
     </footer>
+
+    <script>
+    const burger = document.getElementById("burger");
+const navbar = document.getElementById("navbar");
+
+// Adding click event listener to the burger
+burger.addEventListener("click", function() {
+    navbar.classList.toggle("active");  // Toggle the 'active' class on the navbar
+});
+    </script>
 </body>
 </html>

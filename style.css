@@ -668,63 +668,6 @@ header .header-container .navbar {
 
 
 
-@media (max-width:1000px) {
-    .header-container {
-    width: 95%;
-}
-
- header .header-container .burger{
-        display: flex;
-    }
-
-    header .header-container .navbar {
-        display: none; /* Initially hidden */
-        flex-direction: column;
-        background-color: #202020;
-        position: absolute;
-        top: 5.5vh;
-        left: 0;
-        width: 100%;
-        padding: 20px;
-    }
-
-    /* Show navbar when active class is added */
-    header .header-container .burger .navbar.active {
-        display: flex;
-    }
-
-
-    .factory {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    gap: 10px; /* Space between images */
-    padding: 0 20px; /* Space on left and right */
-    margin-top: 30px;
-}
-
-.image-container {
-    position: relative;
-    width: 100%; /* Adjust as needed */
-    overflow: hidden;
-}
-
-.hover-img {
-    width: 100%;
-    transition: filter 0.5s ease; /* Transition for darkening the image */
-    filter: brightness(1); /* Normal brightness */
-}
-
-
-}
-
-/* When Navbar is Active (shown on click) */
-header .header-container .navbar.active {
-    display: flex;
-}
-
-
-
 
 @media (max-width:800px) {
     .header-container {
@@ -864,4 +807,281 @@ header .header-container .navbar.active {
 
 
 }
+
+
+
+@media (max-width:500px)  {
+    .footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    /* margin-bottom: 50px; */
+}
+}
+
+
+@media (max-width:1400px) {
+.ski-container {
+    max-height: 500px; /* Max height set to 400px */
+    width: calc(720 / 936 * 400px); /* Dynamic width calculated based on the height ratio */
+    overflow: hidden;
+    display: flex;
+    justify-content: baseline;
+    align-items: baseline;
+    position: relative;
+    background-color: #E8E8e8;
+    transition: transform 0.3s ease;
+    /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); */
+}
+
+.ski-container img {
+    max-height: 550px; /* Ensure the image stays within the max height */
+    width: calc(720 / 936 * 350px); /* Dynamic width calculated similarly to the container */
+    object-fit: cover; /* Ensures the image doesn't get distorted */
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+}
+
+
+@media (max-width:1250px) {
+
+
+
+
+.ski-container {
+    max-height: 450px; /* Max height set to 400px */
+    width: calc(720 / 936 * 400px); /* Dynamic width calculated based on the height ratio */
+    overflow: hidden;
+    display: flex;
+    justify-content: baseline;
+    align-items: baseline;
+    position: relative;
+    background-color: #E8E8e8;
+    transition: transform 0.3s ease;
+    /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); */
+}
+
+.ski-container img {
+    max-height: 500px; /* Ensure the image stays within the max height */
+    width: calc(720 / 936 * 300px); /* Dynamic width calculated similarly to the container */
+    object-fit: cover; /* Ensures the image doesn't get distorted */
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+
+
+}
+
+
+
+@media (max-width:1105px) {
+
+
+
+
+.ski-container {
+    max-height: 550px; /* Max height set to 400px */
+    width: calc(720 / 936 * 450px); /* Dynamic width calculated based on the height ratio */
+    overflow: hidden;
+    display: flex;
+    justify-content: baseline;
+    align-items: baseline;
+    position: relative;
+    background-color: #E8E8e8;
+    transition: transform 0.3s ease;
+    /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); */
+}
+
+.ski-container img {
+    max-height: 550px; /* Ensure the image stays within the max height */
+    width: calc(720 / 936 * 250px); /* Dynamic width calculated similarly to the container */
+    object-fit: cover; /* Ensures the image doesn't get distorted */
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+
+
+}
+
+
+@media (max-width:1000px) {
+    .header-container {
+    width: 95%;
+}
+
+ header .header-container .burger{
+        display: flex;
+    }
+
+    header .header-container .navbar {
+        display: none; /* Initially hidden */
+        flex-direction: column;
+        background-color: #202020;
+        position: absolute;
+        top: 5vh;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+    }
+
+    /* Show navbar when active class is added */
+    header .header-container .burger .navbar.active {
+        display: flex;
+    }
+
+
+    .factory {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 10px; /* Space between images */
+    padding: 0 20px; /* Space on left and right */
+    margin-top: 30px;
+}
+
+.image-container {
+    position: relative;
+    width: 100%; /* Adjust as needed */
+    overflow: hidden;
+}
+
+.hover-img {
+    width: 100%;
+    transition: filter 0.5s ease; /* Transition for darkening the image */
+    filter: brightness(1); /* Normal brightness */
+}
+
+
+/* ///////// */
+.details {
+    position: absolute;
+    bottom: 0px;
+    /* left: 10px; */
+    color: #333;
+    padding:10px;
+    z-index: 3;
+    /* background: linear-gradient(to top, rgba(51, 51, 51, 1), rgba(51, 51, 51, 0)); */
+    /* width: 100%; */
+     display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start; 
+
+}
+
+.details .details-h2{
+   font-family: Montserrat, sans-serif;
+   font-weight: 900;
+   text-transform: uppercase;
+   font-size: 13px;
+   margin-bottom: 8px;
+   /* letter-spacing: 5px; */
+}
+
+
+.details .details-p1{
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 900;
+     margin: 0; 
+     display: none;
+}
+
+.details .details-p2 {
+ font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin: 0;
+    margin-bottom: 10px;
+    display: none;
+}
+
+.details .details-div {
+    display: flex;
+     flex-direction: row; /* Stack elements vertically */
+    gap: 20px;
+    margin-bottom: 10px;
+    align-items: start;
+    top: 0;
+}
+
+.ski-container:hover .details {
+   background: linear-gradient(to top, rgb(229, 229, 229), rgba(229, 229, 229, 1),rgba(229, 229, 229, 1),rgba(229, 229, 229, 0.9),rgba(229, 229, 229, 0.7),rgba(229, 229, 229, 0.4), rgba(229, 229, 229, 0));
+}
+
+
+.details .details-div .details-p {
+ display: none;
+    
+}
+
+.details .details-div .details-price {
+ font-size: 11px;
+ font-weight: 900;
+ margin: 0;
+
+
+}
+
+
+.ski-container {
+    max-height: 500px; /* Max height set to 400px */
+    width: calc(720 / 936 * 450px); /* Dynamic width calculated based on the height ratio */
+    overflow: hidden;
+    display: flex;
+    justify-content: baseline;
+    align-items: baseline;
+    position: relative;
+    background-color: #E8E8e8;
+    transition: transform 0.3s ease;
+    /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); */
+}
+
+.ski-container img {
+    max-height: 700px; /* Ensure the image stays within the max height */
+    width: calc(720 / 936 * 450px); /* Dynamic width calculated similarly to the container */
+    object-fit: cover; /* Ensures the image doesn't get distorted */
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.hot .products {
+  display: flex;
+  justify-content: start;
+  margin-left: 20px;
+  margin-right: 20px;
+  flex-wrap: wrap;
+  align-items: start;
+
+}
+
+
+
+}
+
+
+@media (max-width:742px) {
+
+    .hot .products {
+  display: flex;
+  justify-content: center;
+  margin-left: 20px;
+  margin-right: 20px;
+  flex-direction: column;
+  align-items: center;
+
+}
+    
+}
+
+/* When Navbar is Active (shown on click) */
+header .header-container .navbar.active {
+    display: flex;
+}
+
 

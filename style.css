@@ -1052,16 +1052,53 @@ header .header-container .navbar {
 
 .hot .products {
   display: flex;
-  justify-content: start;
+  justify-content: space-between;
+  margin-left: 120px;
+  margin-right: 120px;
+  flex-wrap: wrap;
+  align-items: start;
+
+}
+}
+
+
+@media (max-width:942px) {
+    .hot .products {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 80px;
+  margin-right: 80px;
+  flex-wrap: wrap;
+  align-items: start;
+
+}
+}
+
+
+@media (max-width:883px) {
+    .hot .products {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 50px;
+  margin-right: 50px;
+  flex-wrap: wrap;
+  align-items: start;
+
+}
+}
+
+
+
+@media (max-width:802px) {
+    .hot .products {
+  display: flex;
+  justify-content: space-between;
   margin-left: 20px;
   margin-right: 20px;
   flex-wrap: wrap;
   align-items: start;
 
 }
-
-
-
 }
 
 

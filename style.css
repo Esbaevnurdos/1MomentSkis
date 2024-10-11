@@ -13,6 +13,8 @@ header {
     width: 100%; 
     height: 8vh; 
     background: #202020!important;
+    position: fixed;
+    z-index: 1000;
 }
 
 .header-container {
@@ -24,6 +26,8 @@ header {
     /* justify-content: space-around; */
     justify-content: space-between;
     align-items: center;
+    /* position: fixed;
+    z-index: 10; */
     
 }
 
@@ -108,6 +112,7 @@ header .header-container .navbar li a:hover::after {
 .shop {
     position: relative;
     /* display: inline-block; */
+    margin-top: 75px;
 }
 
 .shop-text {
@@ -348,55 +353,167 @@ header .header-container .navbar li a:hover::after {
     color: #333;
 } */
 
+.hot .products {
+    display: flex; 
+    gap: 10px; /* 10px gap between each ski container */
+    justify-content: center;
+    margin-top: 20px;
+    /* padding: 0 20px; */
+}
+
 .ski-container {
-    position: relative;
-    width: 200px; /* Adjust based on your design */
-    height: 600px; /* Adjust based on your design */
+    max-height: 500px; /* Max height set to 400px */
+    width: calc(720 / 936 * 400px); /* Dynamic width calculated based on the height ratio */
     overflow: hidden;
-    margin: 20px;
+    display: flex;
+    justify-content: baseline;
+    align-items: baseline;
+    position: relative;
+    background-color: #f9f9f9;
     transition: transform 0.3s ease;
+    /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); */
 }
 
 .ski-container img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
+    max-height: 600px; /* Ensure the image stays within the max height */
+    width: calc(720 / 936 * 380px); /* Dynamic width calculated similarly to the container */
+    object-fit: cover; /* Ensures the image doesn't get distorted */
     transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.ski-container::before {
+    content: '';
+    position: absolute;
+    bottom: 0; /* Start at the bottom */
+    left: 0;
+    right: 0;
+    height: 60%;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+}
+
+
+.ski-container:hover::before {
+    opacity: 1; 
 }
 
 .default-img {
     z-index: 1;
 }
 
-.hover-img {
+
+.ski-container .hover-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px; /* Fixed image size */
+    height: 600px;
     opacity: 0;
-    transform: scale(1.2); /* Makes the image slightly larger */
     z-index: 2;
+    transition: opacity 0.5s ease, transform 3.5s ease;
 }
+
 
 .ski-container:hover .hover-img {
     opacity: 1;
-    transform: scale(1); /* Returns to normal size */
+    /* transform: scale(1);  */
+    transform: scale(1.05); 
 }
 
 .ski-container:hover .default-img {
     opacity: 0;
 }
 
-.ski-container:hover {
-    transform: scale(1.05); /* Moves the container closer */
-}
-
 .details {
     position: absolute;
-    bottom: 10px;
-    left: 10px;
+    bottom: 0px;
+    /* left: 10px; */
     color: #333;
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 10px;
+    padding:10px;
     z-index: 3;
+    /* background: linear-gradient(to top, rgba(51, 51, 51, 1), rgba(51, 51, 51, 0)); */
+    /* width: 100%; */
+     display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start; 
+
 }
 
+.details .details-h2{
+   font-family: Montserrat, sans-serif;
+   font-weight: 900;
+   text-transform: uppercase;
+   font-size: 13px;
+   margin-bottom: 8px;
+   /* letter-spacing: 5px; */
+}
+
+
+.details .details-p1{
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 900;
+     margin: 0; 
+}
+
+.details .details-p2 {
+ font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.details .details-div {
+    display: flex;
+     flex-direction: row; /* Stack elements vertically */
+    gap: 20px;
+    margin-bottom: 10px;
+    align-items: start;
+    top: 0;
+}
+
+.ski-container:hover .details {
+   background: linear-gradient(to top, rgb(229, 229, 229), rgba(229, 229, 229, 1),rgba(229, 229, 229, 1),rgba(229, 229, 229, 0.9),rgba(229, 229, 229, 0.7),rgba(229, 229, 229, 0.4), rgba(229, 229, 229, 0));
+}
+
+
+.details .details-div .details-p {
+   font-size: 11px;
+    margin: 0;
+    
+}
+
+.details .details-div .details-price {
+ font-size: 11px;
+ font-weight: 900;
+ margin: 0;
+
+}
+
+.hot hr {
+  /* margin: 10px 0; */
+  width:85%;
+  height: 1px;
+  background-color: #333;
+  border: none;
+  margin: 0 auto;
+}
+
+
+.hot .products .ski-container .details hr {
+  /* margin: 10px 0; */
+    width: 100%;
+    height: 1px;
+    background-color: #333;
+    border: none;
+    /* margin: 5px 0; */
+    margin-bottom: 8px;
+}
 
 .hot h1{ 
     font-family: Montserrat, sans-serif;
@@ -413,14 +530,191 @@ header .header-container .navbar li a:hover::after {
     text-align: center;
 }
 
-.hot hr {
-     margin: 10px 0;
-  width:85%;
-  height: 1px;
-  background-color: #333;
-  border: none;
-  margin: 0 auto;
+.factory {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; /* Space between images */
+    padding: 0 20px; /* Space on left and right */
+    margin-top: 30px;
 }
+
+.image-container {
+    position: relative;
+    width: 50%; /* Adjust as needed */
+    overflow: hidden;
+}
+
+.hover-img {
+    width: 100%;
+    transition: filter 0.5s ease; /* Transition for darkening the image */
+    filter: brightness(1); /* Normal brightness */
+}
+
+.text-overlay {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: white;
+    font-weight: bold;
+
+}
+
+.initial-text {
+    font-size: 20px;
+    margin: 0;
+    color: white; /* Initial text color stays white */
+    transition: transform 0.5s ease, color 0.5s ease; /* Transition for moving text */
+    font-family: Montserrat, sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    text-transform: uppercase;
+    display: block;
+    letter-spacing: 0px;
+    text-rendering: optimizeLegibility;
+    font-size: 26px;
+    text-align: center;
+}
+
+.hover-text {
+    font-size: 11px; /* Space between initial and hover text */
+    color: white;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease; /* Slow text appearance */
+    font-family: 'Inter', sans-serif;
+    font-weight: 100;
+    margin-top: 15px; /* Space between the initial text and hover text */
+    text-align: center;
+}
+
+.image-container:hover .hover-img {
+    filter: brightness(0.5); /* Darkens the image */
+}
+
+.image-container:hover .initial-text {
+    transform: translateY(-10px); /* Moves initial text slightly up */
+}
+
+.image-container:hover .hover-text {
+    opacity: 1; /* Hover text appears */
+}
+
+/* Single underline effect for text - positioned between initial and hover text */
+.line-between {
+    content: '';
+    display: block;
+    width: 0px; /* Initially no line */
+    height: 1px;
+    background: white;
+    margin: 5px auto; /* Ensures space between the two texts */
+    transition: width 0.5s ease; /* Smooth line animation */
+    /* margin-top: 15px; */
+}
+
+.image-container:hover .line-between {
+    width: 350px; /* Line grows to full width on hover */
+}
+
+/* Footer styles */
+.footer {
+    background-color: #1c1c1c;
+    color: white;
+    padding: 20px 0;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 30px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    /* margin-bottom: 50px; */
+}
+
+.footer-column {
+    width: 20%; /* Adjust to match space */
+}
+
+.footer-column h3 {
+    font-weight: 900;
+    font-size: 15px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 7px;
+}
+
+.footer-column ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 11px;
+}
+
+/* .footer-column ul li a:hover {
+    text-decoration: underline;
+} */
+
+.signup-column form {
+    display: flex;
+    flex-direction: column;
+}
+
+.signup-column input[type="email"] {
+    padding: 10px;
+    border: none;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.signup-column button {
+    padding: 10px;
+    width: 260px;
+    background-color: #333;
+    color: white;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.signup-column button:hover {
+    background-color: #d54d4d;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: white;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.footer-bottom {
+    text-align: center;
+    /* padding: 10px 155px; */
+    /* background-color: #121212; */
+    margin-top: 20px;
+    
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 12px;
+}
+
+
 
 @media (max-width:1000px) {
     .header-container {

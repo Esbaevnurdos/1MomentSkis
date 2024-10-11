@@ -1,9 +1,11 @@
 body{
     font-family: 'Inter', sans-serif;
-    margin: 0 auto;
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
     gap: 20px;
+
 }
 
 header {
@@ -100,11 +102,12 @@ header .header-container .navbar li a:hover::after {
 .main .shop .shop-img {
     width: 100%;
     height: auto;
+   
 }
 
 .shop {
     position: relative;
-    display: inline-block;
+    /* display: inline-block; */
 }
 
 .shop-text {
@@ -168,8 +171,256 @@ header .header-container .navbar li a:hover::after {
     transition: 0.5s;
 }
 
+.second-main .card-container .card-text h2{
+    font-size: 28px;
+    line-height: 1.5;
+    font-family: Montserrat,sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 1rem 0;
+}
+
+.second-main .card-container .card-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    /* font-size: 40px; */
+    /* font-weight: bold; */
+    /* text-transform: uppercase; */
+    border-radius: 1px;
+    transition: background-color 0.3s ease;
+}
+
+.second-main .card-container {
+    position: relative;
+    width: 500px;
+    height: auto;
+    overflow: hidden;
+}
+
+.second-main .card-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: filter 0.3s ease;
+}
+
+.second-main {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.second-main .card-container h2 {
+    position: relative;
+    transition: transform 0.3s ease;
+}
 
 
+.second-main .card-container .underline {
+    width: 0;
+    height: 1px;
+    background-color: white;
+    margin-top: -15px;
+    transition: width 0.5s ease;
+}
+
+.second-main .card-container .card-text .hover-text{
+    display: none;
+    font-size: 12px;
+    margin-top: 20px;
+    font-weight: 100;
+    width: 80%;
+    text-align: center;
+    transition: opacity 1.2s ease 3s;
+    opacity: 0; 
+}
+
+.second-main .card-container .card-text {
+    background: rgba(0, 0, 0, 0.0);
+}
+
+.second-main .card-container:hover h2{
+    transform: translateY(-10px); /* Moves the text up slightly */
+}
+
+.second-main .card-container:hover .underline {
+    width: 40%;
+}
+
+.second-main .card-container .card-text:hover .hover-text {
+    display: block; /* Reveals the hidden text */
+    opacity: 1; 
+}
+
+.second-main .card-container:hover .card-text{
+   background-color: rgba(0, 0, 0, 0.431);
+   
+}
+
+.hot .products {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/* .hot .product-card {
+  position: relative;
+  width: 290px;
+  overflow: hidden;
+  cursor: pointer;
+  height: auto;
+  margin-top: 20px;
+  
+    height: 500px;
+    
+
+} */
+
+/* .hot .product-card .card-image {
+  width: 100%;
+  height: 400px;
+  background-image: "./hello.jpg";
+  background-size: cover;
+  background-position: center;
+  transition: transform 1.4s ease-in-out, background-image 0.4s ease-in-out;
+} */
+
+/* .hot .product-card .card-image::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 25%;
+    background:linear-gradient(to top, rgba(128,128,128, 0.8),  rgba(128,128,128, 0)) ;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+} */
+
+/* .hot .product-card .card-image:hover::after {
+    opacity: 1;
+} */
+
+/* .hot .product-card:hover .card-image {
+    background-image: url('//www.momentskis.com/cdn/shop/files/Deathwish_104_Rollover_800x.jpg?v=1721237192 800w');
+    transform: scale(1.05); 
+} */
+
+/* .hot .product-card .card-details {
+    text-align: center;
+    margin-top: 10px;
+    width: 80%;
+    text-align: center;
+    background-color: rgba(128, 128, 128, 0.8);
+} */
+
+
+/* .hot .product-card .card-details p {
+
+  margin: 5px 0;
+   font-family: 'Inter', sans-serif;
+
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 12px;
+    text-align: start;
+    color: #333;
+} */
+
+/* .hot .product-card .card-details h2{
+    font-family: Montserrat, sans-serif;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-align: start;
+    color: #333;
+} */
+
+.ski-container {
+    position: relative;
+    width: 200px; /* Adjust based on your design */
+    height: 600px; /* Adjust based on your design */
+    overflow: hidden;
+    margin: 20px;
+    transition: transform 0.3s ease;
+}
+
+.ski-container img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.default-img {
+    z-index: 1;
+}
+
+.hover-img {
+    opacity: 0;
+    transform: scale(1.2); /* Makes the image slightly larger */
+    z-index: 2;
+}
+
+.ski-container:hover .hover-img {
+    opacity: 1;
+    transform: scale(1); /* Returns to normal size */
+}
+
+.ski-container:hover .default-img {
+    opacity: 0;
+}
+
+.ski-container:hover {
+    transform: scale(1.05); /* Moves the container closer */
+}
+
+.details {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    z-index: 3;
+}
+
+
+.hot h1{ 
+    font-family: Montserrat, sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    text-transform: uppercase;
+    line-height: 1.5;
+    color: #333;
+    display: block;
+    letter-spacing: 0px;
+    text-rendering: optimizeLegibility;
+    font-size: 26px;
+    margin-bottom: .75em;
+    text-align: center;
+}
+
+.hot hr {
+     margin: 10px 0;
+  width:85%;
+  height: 1px;
+  background-color: #333;
+  border: none;
+  margin: 0 auto;
+}
 
 @media (max-width:1000px) {
     .header-container {
@@ -183,12 +434,3 @@ header .header-container .navbar li a:hover::after {
 }
 }
 
-
-margin-bottom: 0;
-    line-height: 1em;
-
-
-    margin-bottom: .5em;
-    line-height: 1.2em;
-
-        font-size: 11.666666666666666px;
